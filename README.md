@@ -70,6 +70,7 @@ The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-t
    sha256sum ./output/pretrained/coat_lite_tiny_e88e96b0.pth  # Make sure it matches the SHA-256 hash (first 8 characters) in the table.
 
    # Evaluate.
+   # Usage: bash ./scripts/eval.sh [model name] [output folder] [checkpoint path]
    bash ./scripts/eval.sh coat_lite_tiny coat_lite_tiny_pretrained ./output/pretrained/coat_lite_tiny_e88e96b0.pth
    # It should output results similar to "Acc@1 77.504 Acc@5 93.814" at very last.
    ```
@@ -77,12 +78,14 @@ The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-t
 ### Train
    The following commands provide an example (CoaT-Lite Tiny, 8-GPU) to train the CoaT model.
    ```bash
+   # Usage: bash ./scripts/train.sh [model name] [output folder]
    bash ./scripts/train.sh coat_lite_tiny coat_lite_tiny
    ```
 
 ### Evaluate
    The following commands provide an example (CoaT-Lite Tiny) to evaluate the checkpoint after training.
    ```bash
+   # Usage: bash ./scripts/eval.sh [model name] [output folder] [checkpoint path]
    bash ./scripts/eval.sh coat_lite_tiny coat_lite_tiny_eval ./output/coat_lite_tiny/checkpoints/checkpoint0299.pth
    ```
 

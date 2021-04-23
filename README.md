@@ -8,6 +8,7 @@ This repository contains the official code and pretrained models for [CoaT: Co-S
 For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transformers](http://arxiv.org/abs/2104.06399) by [Weijian Xu*](https://weijianxu.com/), [Yifan Xu*](https://yfxu.com/), [Tyler Chang](https://tylerachang.github.io/), and [Zhuowen Tu](https://pages.ucsd.edu/~ztu/).
 
 ## Changelog
+04/23/2021: Pre-trained checkpoint for CoaT-Lite Mini is released. <br />
 04/22/2021: Code and pre-trained checkpoint for CoaT-Lite Tiny are released.
 
 ## Usage
@@ -58,7 +59,8 @@ We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
 
 | Name | Acc@1 | Acc@5 | #Params | SHA-256 (first 8 chars) | URL |
 | --- | --- | --- | --- | --- | --- |
-| CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M | e88e96b0 |[model](http://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.pth), [metrics](http://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.txt) |
+| CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M | e88e96b0 |[model](http://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.pth), [log](http://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.txt) |
+| CoaT-Lite Mini | 79.1 | 94.5 | 11M | 6b4a8ae5 |[model](http://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.pth), [log](http://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.txt) |
 
 The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-trained checkpoint.
    ```bash

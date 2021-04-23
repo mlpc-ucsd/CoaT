@@ -11,7 +11,7 @@ else
     exit 1
 fi
 
-# Create folder, copy files, and train.
+# Create folder, copy files, and evaluate.
 output=output/$exp
 
 if [ ! -d "$output" ]; then

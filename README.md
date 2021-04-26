@@ -8,10 +8,13 @@ This repository contains the official code and pretrained models for [CoaT: Co-S
 For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transformers](http://arxiv.org/abs/2104.06399) by [Weijian Xu*](https://weijianxu.com/), [Yifan Xu*](https://yfxu.com/), [Tyler Chang](https://tylerachang.github.io/), and [Zhuowen Tu](https://pages.ucsd.edu/~ztu/).
 
 ## Changelog
+04/25/2021: Code and pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Mini backbone is released. <br />
 04/23/2021: Pre-trained checkpoint for CoaT-Lite Mini is released. <br />
 04/22/2021: Code and pre-trained checkpoint for CoaT-Lite Tiny are released.
 
 ## Usage
+The following usage is provided for the classification task using CoaT model. For the other tasks, please follow the corresponding readme, such as [instance segmentation](./tasks/detectron2/README.md).
+
 ### Environment Preparation
 1. Set up a new conda environment and activate it.
    ```bash

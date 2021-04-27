@@ -42,9 +42,10 @@ Link models, download COCO 2017 dataset and extract the dataset.
 ### Evaluate Pre-trained Checkpoint
 We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
 
-| Name | Bbox AP | Segm AP | SHA-256 (first 8 chars) | URL |
-| --- | --- | --- | --- | --- |
-| CoaT-Lite Mini | 39.9 | 36.4 | 5bb8caf8 |[model](http://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_1x_5bb8caf8.pth), [metrics](http://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_1x_5bb8caf8.json) |
+| Name | Schedule | Bbox AP | Segm AP | SHA-256 (first 8 chars) | URL |
+| --- | --- | --- | --- | --- | --- |
+| CoaT-Lite Mini | 1x | 39.9 | 36.4 | 5bb8caf8 |[model](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_1x_5bb8caf8.pth), [metrics](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_1x_5bb8caf8.json) |
+| CoaT-Lite Mini | 3x | 41.8 | 37.7 | 4dec4a9b |[model](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_3x_4dec4a9b.pth), [metrics](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_3x_4dec4a9b.json) |
 
 The following commands provide an example (CoaT-Lite Mini) to evaluate the pre-trained checkpoint.
    ```bash

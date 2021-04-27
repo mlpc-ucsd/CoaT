@@ -62,8 +62,8 @@ We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
 
 | Name | Acc@1 | Acc@5 | #Params | SHA-256 (first 8 chars) | URL |
 | --- | --- | --- | --- | --- | --- |
-| CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M | e88e96b0 |[model](http://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.pth), [log](http://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.txt) |
-| CoaT-Lite Mini | 79.1 | 94.5 | 11M | 6b4a8ae5 |[model](http://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.pth), [log](http://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.txt) |
+| CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M | e88e96b0 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.txt) |
+| CoaT-Lite Mini | 79.1 | 94.5 | 11M | 6b4a8ae5 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.txt) |
 
 The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-trained checkpoint.
    ```bash

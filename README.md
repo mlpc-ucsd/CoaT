@@ -7,6 +7,21 @@ This repository contains the official code and pretrained models for [CoaT: Co-S
 
 For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transformers](http://arxiv.org/abs/2104.06399) by [Weijian Xu*](https://weijianxu.com/), [Yifan Xu*](https://yfxu.com/), [Tyler Chang](https://tylerachang.github.io/), and [Zhuowen Tu](https://pages.ucsd.edu/~ztu/).
 
+## Performance
+1. Classification (ImageNet dataset)
+
+| Name | Acc@1 | Acc@5 | #Params |
+| --- | --- | --- | --- |
+| CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M |
+| CoaT-Lite Mini | 79.1 | 94.5 | 11M |
+
+2. Instance Segmentation (Mask R-CNN w/ FPN on COCO dataset)
+
+| Name | Schedule | Bbox AP | Segm AP |
+| --- | --- | --- | --- |
+| CoaT-Lite Mini | 1x | 39.9 | 36.4 |
+| CoaT-Lite Mini | 3x | 41.8 | 37.7 |
+
 ## Changelog
 04/25/2021: Code and pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Mini backbone is released. <br />
 04/23/2021: Pre-trained checkpoint for CoaT-Lite Mini is released. <br />

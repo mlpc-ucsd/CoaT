@@ -46,6 +46,8 @@ We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
 | --- | --- | --- | --- | --- | --- |
 | CoaT-Lite Mini | 1x | 39.9 | 36.4 | 5bb8caf8 |[model](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_1x_5bb8caf8.pth), [metrics](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_1x_5bb8caf8.json) |
 | CoaT-Lite Mini | 3x | 41.8 | 37.7 | 4dec4a9b |[model](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_3x_4dec4a9b.pth), [metrics](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_lite_mini_FPN_3x_4dec4a9b.json) |
+| CoaT Mini | 1x | 44.0 | 39.5 | 9ddaa460 |[model](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_mini_FPN_1x_9ddaa460.pth), [metrics](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_mini_FPN_1x_9ddaa460.json) |
+| CoaT Mini | 3x | 45.2 | 40.2 | f34f1182 |[model](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_mini_FPN_3x_f34f1182.pth), [metrics](https://vcl.ucsd.edu/coat/pretrained/tasks/detectron2/mask_rcnn_coat_mini_FPN_3x_f34f1182.json) |
 
 The following commands provide an example (CoaT-Lite Mini) to evaluate the pre-trained checkpoint.
    ```bash

@@ -14,6 +14,7 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 | --- | --- | --- | --- |
 | CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M |
 | CoaT-Lite Mini | 79.1 | 94.5 | 11M |
+| CoaT-Lite Small | 81.9 | 95.5 | 20M |
 | CoaT Tiny | 78.3 | 94.0 | 5.5M |
 | CoaT Mini | 81.0 | 95.2 | 10M |
 
@@ -27,6 +28,7 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 | CoaT Mini | 3x | 45.2 | 40.2 |
 
 ## Changelog
+05/11/2021: Pre-trained checkpoint for CoaT-Lite Small is released. <br />
 05/09/2021: Pre-trained checkpoint for Mask R-CNN benchmark with CoaT Mini backbone is released. <br />
 05/06/2021: Pre-trained checkpoint for CoaT Mini is released. <br />
 05/02/2021: Pre-trained checkpoint for CoaT Tiny is released. <br />
@@ -86,6 +88,7 @@ We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
 | --- | --- | --- | --- | --- | --- |
 | CoaT-Lite Tiny | 77.5 | 93.8 | 5.7M | e88e96b0 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_tiny_e88e96b0.txt) |
 | CoaT-Lite Mini | 79.1 | 94.5 | 11M | 6b4a8ae5 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.txt) |
+| CoaT-Lite Small | 81.9 | 95.5 | 20M | 8d362f48 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_small_8d362f48.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_small_8d362f48.txt) |
 | CoaT Tiny | 78.3 | 94.0 | 5.5M | c6efc33c |[model](https://vcl.ucsd.edu/coat/pretrained/coat_tiny_c6efc33c.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_tiny_c6efc33c.txt) |
 | CoaT Mini | 81.0 | 95.2 | 10M | 40667eec |[model](https://vcl.ucsd.edu/coat/pretrained/coat_mini_40667eec.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_mini_40667eec.txt) |
 

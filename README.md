@@ -24,6 +24,8 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 | --- | --- | --- | --- |
 | CoaT-Lite Mini | 1x | 39.9 | 36.4 |
 | CoaT-Lite Mini | 3x | 41.8 | 37.7 |
+| CoaT-Lite Small | 1x | 43.7 | 39.3 |
+| CoaT-Lite Small | 3x | 44.5 | 39.8 |
 | CoaT Mini | 1x | 44.0 | 39.5 |
 | CoaT Mini | 3x | 45.2 | 40.2 |
 
@@ -35,6 +37,7 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 
 
 ## Changelog
+05/19/2021: Pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Small backbone is released. <br />
 05/19/2021: Code and pre-trained checkpoint for Deformable-DETR with for CoaT-Lite Small backbone are released. <br />
 05/11/2021: Pre-trained checkpoint for CoaT-Lite Small is released. <br />
 05/09/2021: Pre-trained checkpoint for Mask R-CNN benchmark with CoaT Mini backbone is released. <br />

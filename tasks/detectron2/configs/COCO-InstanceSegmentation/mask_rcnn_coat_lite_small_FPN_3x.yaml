@@ -1,0 +1,18 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+MODEL:
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  MASK_ON: True
+  BACKBONE:
+    NAME: "build_coat_fpn_backbone"
+  COAT:
+    NAME: "coat_lite_small"
+    OUT_FEATURES: ["x1_nocls", "x2_nocls", "x3_nocls", "x4_nocls"]
+    WEIGHTS: "../../output/pretrained/coat_lite_small_8d362f48.pth"
+  FPN:
+    IN_FEATURES: ["x1_nocls", "x2_nocls", "x3_nocls", "x4_nocls"]
+SOLVER:
+  STEPS: (210000, 250000)
+  MAX_ITER: 270000
+INPUT:
+  FORMAT: "RGB"

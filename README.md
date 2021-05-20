@@ -27,17 +27,25 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 | CoaT Mini | 1x | 44.0 | 39.5 |
 | CoaT Mini | 3x | 45.2 | 40.2 |
 
+3. Object Detection (Deformable-DETR on COCO dataset)
+
+| Name | AP | AP50 | AP75 | APS | APM | APL |
+| --- | --- | --- | --- | --- | --- | --- |
+| CoaT-Lite Small | 47.0 | 66.5 | 51.2 | 28.8 | 50.3 | 63.3 | 
+
+
 ## Changelog
+05/19/2021: Code and pre-trained checkpoint for Deformable-DETR with for CoaT-Lite Small backbone are released. <br />
 05/11/2021: Pre-trained checkpoint for CoaT-Lite Small is released. <br />
 05/09/2021: Pre-trained checkpoint for Mask R-CNN benchmark with CoaT Mini backbone is released. <br />
 05/06/2021: Pre-trained checkpoint for CoaT Mini is released. <br />
 05/02/2021: Pre-trained checkpoint for CoaT Tiny is released. <br />
-04/25/2021: Code and pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Mini backbone is released. <br />
+04/25/2021: Code and pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Mini backbone are released. <br />
 04/23/2021: Pre-trained checkpoint for CoaT-Lite Mini is released. <br />
 04/22/2021: Code and pre-trained checkpoint for CoaT-Lite Tiny are released.
 
 ## Usage
-The following usage is provided for the classification task using CoaT model. For the other tasks, please follow the corresponding readme, such as [instance segmentation](./tasks/detectron2/README.md).
+The following usage is provided for the classification task using CoaT model. For the other tasks, please follow the corresponding readme, such as [instance segmentation](./tasks/detectron2/README.md) and [object detection](./tasks/Deformable-DETR/README.md).
 
 ### Environment Preparation
 1. Set up a new conda environment and activate it.

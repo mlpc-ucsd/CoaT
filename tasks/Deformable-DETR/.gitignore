@@ -1,0 +1,7 @@
+**/__pycache__/**
+data/*
+exps/*
+models/ops/build/*
+models/ops/dist/*
+models/ops/*.egg-info
+.ipynb_checkpoints

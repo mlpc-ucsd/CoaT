@@ -40,7 +40,7 @@ Please follow the steps in [instance segmentation](../detectron2/README.md) to d
    ```
 
 ### Evaluate Pre-trained Checkpoint
-We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
+We provide the CoaT checkpoints pre-trained on the COCO dataset.
 
 | Name | AP | AP50 | AP75 | APS | APM | APL | SHA-256 (first 8 chars) | URL |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

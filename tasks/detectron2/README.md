@@ -1,6 +1,9 @@
 # CoaT: Co-Scale Conv-Attentional Image Transformers
 
-## Instance Segmentation
+## Instance Segmentation 
+
+**Note**: This implementation is deprecated. See [MMDetection version](../mmdet/README.md) instead.
+
 This folder contains the instance segmentation experiments using [Mask R-CNN](https://arxiv.org/abs/1703.06870) framework with CoaT backbone. Specifically, [feature pyramid networks](https://arxiv.org/abs/1612.03144) (FPN) are enabled. We use the [Detectron2](https://github.com/facebookresearch/detectron2) as the base implementation and follow its `Mask R-CNN w/ FPN 1x` and `3x` settings in our experiments.
 
 ## Usage
@@ -40,7 +43,7 @@ Link models, download COCO 2017 dataset and extract the dataset.
    ```
 
 ### Evaluate Pre-trained Checkpoint
-We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
+We provide the CoaT checkpoints pre-trained on the COCO dataset.
 
 | Name | Schedule | Bbox AP | Segm AP | SHA-256 (first 8 chars) | URL |
 | --- | --- | --- | --- | --- | --- |

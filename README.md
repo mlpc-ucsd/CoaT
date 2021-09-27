@@ -24,14 +24,14 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 
    | Name | Schedule | Bbox AP | Segm AP |
    | --- | --- | --- | --- |
-   | CoaT-Lite Mini | 1x | 39.9 | 36.4 |
-   | CoaT-Lite Mini | 3x | 41.8 | 37.7 |
-   | CoaT-Lite Small | 1x | 43.7 | 39.3 |
-   | CoaT-Lite Small | 3x | 44.5 | 39.8 |
-   | CoaT Mini | 1x | 44.0 | 39.5 |
-   | CoaT Mini | 3x | 45.2 | 40.2 |
-
-   Note: We use the MMDetection framework for instance segmentation in recent arXiv paper. We will update the code and above results soon.
+   | CoaT-Lite Mini | 1x | 41.4 | 38.0 |
+   | CoaT-Lite Mini | 3x | 42.9 | 38.9 |
+   | CoaT-Lite Small | 1x | 45.2 | 40.7 |
+   | CoaT-Lite Small | 3x | 45.7 | 41.1 |
+   | CoaT Mini | 1x | 45.1 | 40.6 |
+   | CoaT Mini | 3x | 46.5 | 41.8 |
+   | CoaT Small | 1x | 46.5 | 41.8 |
+   | CoaT Small | 3x | 49.0 | 43.7 |
 
 3. Object Detection (Deformable-DETR on COCO dataset)
 
@@ -41,19 +41,20 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 
 
 ## Changelog
-08/27/2021: Pre-trained checkpoint for CoaT Small and CoaT-Lite Medium are released. <br />
-05/19/2021: Pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Small backbone is released. <br />
-05/19/2021: Code and pre-trained checkpoint for Deformable-DETR with for CoaT-Lite Small backbone are released. <br />
-05/11/2021: Pre-trained checkpoint for CoaT-Lite Small is released. <br />
-05/09/2021: Pre-trained checkpoint for Mask R-CNN benchmark with CoaT Mini backbone is released. <br />
-05/06/2021: Pre-trained checkpoint for CoaT Mini is released. <br />
-05/02/2021: Pre-trained checkpoint for CoaT Tiny is released. <br />
-04/25/2021: Code and pre-trained checkpoint for Mask R-CNN benchmark with CoaT-Lite Mini backbone are released. <br />
-04/23/2021: Pre-trained checkpoint for CoaT-Lite Mini is released. <br />
-04/22/2021: Code and pre-trained checkpoint for CoaT-Lite Tiny are released.
+09/27/2021: Code and pre-trained checkpoints for instance segmentation with MMDetection are released. <br />
+08/27/2021: Pre-trained checkpoints for CoaT Small and CoaT-Lite Medium are released. <br />
+05/19/2021: Pre-trained checkpoints for Mask R-CNN benchmark with CoaT-Lite Small backbone are released. <br />
+05/19/2021: Code and pre-trained checkpoints for Deformable-DETR with for CoaT-Lite Small backbone are released. <br />
+05/11/2021: Pre-trained checkpoints for CoaT-Lite Small are released. <br />
+05/09/2021: Pre-trained checkpoints for Mask R-CNN benchmark with CoaT Mini backbone are released. <br />
+05/06/2021: Pre-trained checkpoints for CoaT Mini are released. <br />
+05/02/2021: Pre-trained checkpoints for CoaT Tiny are released. <br />
+04/25/2021: Code and pre-trained checkpoints for Mask R-CNN benchmark with CoaT-Lite Mini backbone are released. <br />
+04/23/2021: Pre-trained checkpoints for CoaT-Lite Mini are released. <br />
+04/22/2021: Code and pre-trained checkpoints for CoaT-Lite Tiny are released.
 
 ## Usage
-The following usage is provided for the classification task using CoaT model. For the other tasks, please follow the corresponding readme, such as [instance segmentation](./tasks/detectron2/README.md) and [object detection](./tasks/Deformable-DETR/README.md).
+The following usage is provided for the classification task using CoaT model. For the other tasks, please follow the corresponding readme, such as [instance segmentation](./tasks/mmdet/README.md) and [object detection](./tasks/Deformable-DETR/README.md).
 
 ### Environment Preparation
 1. Set up a new conda environment and activate it.

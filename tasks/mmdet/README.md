@@ -37,7 +37,7 @@ Link models, download COCO 2017 dataset and extract the dataset.
    cd ./tasks/mmdet
 
    # Link the models folder.
-   ln -sfT ../../../src/models ./mmdet/models/backbones/coat
+   ln -sfT ../../../../../src/models ./mmdet/models/backbones/coat
 
    # Create dataset folder.
    mkdir -p ./data/coco

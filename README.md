@@ -141,13 +141,13 @@ The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-t
 
 ## Citation
 ```
-@misc{xu2021coscale,
-      title={Co-Scale Conv-Attentional Image Transformers}, 
-      author={Weijian Xu and Yifan Xu and Tyler Chang and Zhuowen Tu},
-      year={2021},
-      eprint={2104.06399},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Xu_2021_ICCV,
+    author    = {Xu, Weijian and Xu, Yifan and Chang, Tyler and Tu, Zhuowen},
+    title     = {Co-Scale Conv-Attentional Image Transformers},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {9981-9990}
 }
 ```
 

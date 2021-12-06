@@ -386,9 +386,8 @@ class CoaT(nn.Module):
         self.crpe3 = ConvRelPosEnc(Ch=embed_dims[2] // num_heads, h=num_heads, window=crpe_window)
         self.crpe4 = ConvRelPosEnc(Ch=embed_dims[3] // num_heads, h=num_heads, window=crpe_window)
 
-        # Disable stochastic depth.
+        # Enable stochastic depth.
         dpr = drop_path_rate
-        assert dpr == 0.0
         
         # Serial blocks 1.
         self.serial_blocks1 = nn.ModuleList([

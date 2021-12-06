@@ -174,7 +174,7 @@ def main(args):
                     'optimizer': optimizer.state_dict(),
                     'lr_scheduler': lr_scheduler.state_dict(),
                     'epoch': -1,  # Note: -1 means initial checkpoint.
-                    'model_ema': get_state_dict(model_ema),
+                    'model_ema': get_state_dict(model_ema) if args.model_ema else None,
                     'args': args,
                 }, checkpoint_path)
 
@@ -197,7 +197,7 @@ def main(args):
                     'optimizer': optimizer.state_dict(),
                     'lr_scheduler': lr_scheduler.state_dict(),
                     'epoch': epoch,
-                    'model_ema': get_state_dict(model_ema),
+                    'model_ema': get_state_dict(model_ema) if args.model_ema else None,
                     'args': args,
                 }, checkpoint_path)
 

@@ -41,6 +41,7 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 
 
 ## Changelog
+12/06/2021: Pre-trained checkpoints for CoaT-Lite Medium (384x384) are released. <br />
 12/05/2021: Training scripts for CoaT Small and CoaT-Lite Medium are released. <br />
 09/27/2021: Code and pre-trained checkpoints for instance segmentation with MMDetection are released. <br />
 08/27/2021: Pre-trained checkpoints for CoaT Small and CoaT-Lite Medium are released. <br />
@@ -108,6 +109,7 @@ We provide the CoaT checkpoints pre-trained on the ImageNet dataset.
 | CoaT-Lite Mini | 79.1 | 94.5 | 11M | 6b4a8ae5 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_mini_6b4a8ae5.txt) |
 | CoaT-Lite Small | 81.9 | 95.5 | 20M | 8d362f48 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_small_8d362f48.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_small_8d362f48.txt) |
 | CoaT-Lite Medium | 83.6 | 96.7 | 45M | a750cd63 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_medium_a750cd63.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_medium_a750cd63.txt)
+| CoaT-Lite Medium (384x384) | 84.5 | 97.1 | 45M | f9129688 |[model](https://vcl.ucsd.edu/coat/pretrained/coat_lite_medium_384x384_f9129688.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_lite_medium_384x384_f9129688.txt)
 | CoaT Tiny | 78.3 | 94.0 | 5.5M | c6efc33c |[model](https://vcl.ucsd.edu/coat/pretrained/coat_tiny_c6efc33c.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_tiny_c6efc33c.txt) |
 | CoaT Mini | 81.0 | 95.2 | 10M | 40667eec |[model](https://vcl.ucsd.edu/coat/pretrained/coat_mini_40667eec.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_mini_40667eec.txt) |
 | CoaT Small | 82.1 | 96.1 | 22M | 7479cf9b |[model](https://vcl.ucsd.edu/coat/pretrained/coat_small_7479cf9b.pth), [log](https://vcl.ucsd.edu/coat/pretrained/coat_small_7479cf9b.txt)
@@ -124,6 +126,12 @@ The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-t
    bash ./scripts/eval.sh coat_lite_tiny coat_lite_tiny_pretrained ./output/pretrained/coat_lite_tiny_e88e96b0.pth
    # It should output results similar to "Acc@1 77.504 Acc@5 93.814" at very last.
    ```
+
+   **Note**: For CoaT-Lite Medium with 384x384 input, we use the following command for evaluation:
+   ```bash
+   # Evaluation command for CoaT-Lite Medium (384x384).
+   bash ./scripts/eval_extra_args.sh coat_lite_medium coat_lite_medium_384x384_pretrained ./output/pretrained/coat_lite_medium_384x384_f9129688.pth --batch-size 128 --input-size 384
+   ```
    
 ### Train
    The following commands provide an example (CoaT-Lite Tiny, 8-GPU) to train the CoaT model.
@@ -134,10 +142,10 @@ The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-t
    **Note**: Some training hyperparameters for CoaT Small and CoaT-Lite Medium are different from the default settings:
    ```bash
    # Training command for CoaT Small.
-   bash ./scripts/train_extra_args.sh coat_small coat_small_debug --batch-size 128 --drop-path 0.2 --no-model-ema --warmup-epochs 20 --clip-grad 5.0
+   bash ./scripts/train_extra_args.sh coat_small coat_small --batch-size 128 --drop-path 0.2 --no-model-ema --warmup-epochs 20 --clip-grad 5.0
    
    # Training command for CoaT-Lite Medium.
-   bash ./scripts/train_extra_args.sh coat_lite_medium coat_lite_medium_debug --batch-size 128 --drop-path 0.3 --no-model-ema --warmup-epochs 20 --clip-grad 5.0
+   bash ./scripts/train_extra_args.sh coat_lite_medium coat_lite_medium --batch-size 128 --drop-path 0.3 --no-model-ema --warmup-epochs 20 --clip-grad 5.0
    ```
 
 ### Evaluate

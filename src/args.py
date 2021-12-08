@@ -3,9 +3,11 @@ import argparse
 
 def get_args_parser():
     parser = argparse.ArgumentParser('DeiT training and evaluation script', add_help=False)
-    # Debug parameters
+    # Debug and profiling parameters
     parser.add_argument('--debug', action='store_true', help='enable debug mode')
-
+    parser.add_argument('--throughput', action='store_true', help='measure throughput')
+    parser.add_argument('--latency', action='store_true', help='measure latency')
+    
     # Basic training parameters.
     parser.add_argument('--batch-size', default=64, type=int)
     parser.add_argument('--epochs', default=300, type=int)
@@ -122,6 +124,7 @@ def get_args_parser():
                         help='device to use for training / testing')
     parser.add_argument('--seed', default=0, type=int)
     parser.add_argument('--resume', default='', help='resume from checkpoint')
+    parser.add_argument('--resume_only_state', action='store_true', help='only resume state dictionary from checkpoint')
     parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
                         help='start epoch')
     parser.add_argument('--eval', action='store_true', help='Perform evaluation only')

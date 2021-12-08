@@ -325,17 +325,11 @@ class ParallelBlock(nn.Module):
 
 class PatchEmbed(nn.Module):
     """ Image to Patch Embedding """
-    def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
+    def __init__(self, patch_size=16, in_chans=3, embed_dim=768):
         super().__init__()
-        img_size = to_2tuple(img_size)
         patch_size = to_2tuple(patch_size)
 
-        self.img_size = img_size
         self.patch_size = patch_size
-        assert img_size[0] % patch_size[0] == 0 and img_size[1] % patch_size[1] == 0, \
-            f"img_size {img_size} should be divided by patch_size {patch_size}."
-        self.H, self.W = img_size[0] // patch_size[0], img_size[1] // patch_size[1]   # Note: self.H, self.W and self.num_patches are not used
-        self.num_patches = self.H * self.W                                            #       since the image size may change on the fly.
         self.proj = nn.Conv2d(in_chans, embed_dim, kernel_size=patch_size, stride=patch_size)
         self.norm = nn.LayerNorm(embed_dim)
 
@@ -351,7 +345,7 @@ class PatchEmbed(nn.Module):
 
 class CoaT(nn.Module):
     """ CoaT class. """
-    def __init__(self, img_size=224, patch_size=16, in_chans=3, num_classes=1000, embed_dims=[0, 0, 0, 0], 
+    def __init__(self, patch_size=16, in_chans=3, num_classes=1000, embed_dims=[0, 0, 0, 0], 
                  serial_depths=[0, 0, 0, 0], parallel_depth=0,
                  num_heads=0, mlp_ratios=[0, 0, 0, 0], qkv_bias=True, qk_scale=None, drop_rate=0., attn_drop_rate=0.,
                  drop_path_rate=0., norm_layer=partial(nn.LayerNorm, eps=1e-6),
@@ -363,10 +357,10 @@ class CoaT(nn.Module):
         self.num_classes = num_classes
 
         # Patch embeddings.
-        self.patch_embed1 = PatchEmbed(img_size=img_size, patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dims[0])
-        self.patch_embed2 = PatchEmbed(img_size=img_size // 4, patch_size=2, in_chans=embed_dims[0], embed_dim=embed_dims[1])
-        self.patch_embed3 = PatchEmbed(img_size=img_size // 8, patch_size=2, in_chans=embed_dims[1], embed_dim=embed_dims[2])
-        self.patch_embed4 = PatchEmbed(img_size=img_size // 16, patch_size=2, in_chans=embed_dims[2], embed_dim=embed_dims[3])
+        self.patch_embed1 = PatchEmbed(patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dims[0])
+        self.patch_embed2 = PatchEmbed(patch_size=2, in_chans=embed_dims[0], embed_dim=embed_dims[1])
+        self.patch_embed3 = PatchEmbed(patch_size=2, in_chans=embed_dims[1], embed_dim=embed_dims[2])
+        self.patch_embed4 = PatchEmbed(patch_size=2, in_chans=embed_dims[2], embed_dim=embed_dims[3])
 
         # Class tokens.
         self.cls_token1 = nn.Parameter(torch.zeros(1, 1, embed_dims[0]))

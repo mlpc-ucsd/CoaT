@@ -41,6 +41,7 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 
 
 ## Changelog
+12/07/2021: Training commands for CoaT-Lite Medium (384x384) are released. <br />
 12/06/2021: Pre-trained checkpoints for CoaT-Lite Medium (384x384) are released. <br />
 12/05/2021: Training scripts for CoaT Small and CoaT-Lite Medium are released. <br />
 09/27/2021: Code and pre-trained checkpoints for instance segmentation with MMDetection are released. <br />
@@ -146,6 +147,22 @@ The following commands provide an example (CoaT-Lite Tiny) to evaluate the pre-t
    
    # Training command for CoaT-Lite Medium.
    bash ./scripts/train_extra_args.sh coat_lite_medium coat_lite_medium --batch-size 128 --drop-path 0.3 --no-model-ema --warmup-epochs 20 --clip-grad 5.0
+
+   # Training command for CoaT-Lite Medium (384x384).
+   bash ./scripts/train_extra_args.sh coat_lite_medium coat_lite_medium_384x384 \
+      --resume ./output/pretrained/coat_lite_medium_a750cd63.pth \
+      --resume_only_state \
+      --batch-size 32 \
+      --drop-path 0.2 \
+      --no-model-ema \
+      --warmup-epochs 0 \
+      --clip-grad 5.0 \
+      --input-size 384 \
+      --lr 5e-6 \
+      --min-lr 5e-6 \
+      --weight-decay 1e-8 \
+      --epochs 6 \
+      --save_freq 1
    ```
 
 ### Evaluate

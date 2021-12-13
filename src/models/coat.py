@@ -19,6 +19,7 @@ from torch import nn, einsum
 __all__ = [
     "coat_tiny",
     "coat_mini",
+    "coat_small",
     "coat_lite_tiny",
     "coat_lite_mini",
     "coat_lite_small"
@@ -257,15 +258,15 @@ class ParallelBlock(nn.Module):
         mlp_hidden_dim = int(dims[1] * mlp_ratios[1])
         self.mlp2 = self.mlp3 = self.mlp4 = Mlp(in_features=dims[1], hidden_features=mlp_hidden_dim, act_layer=act_layer, drop=drop)
 
-    def upsample(self, x, factor, size):
+    def upsample(self, x, output_size, size):
         """ Feature map up-sampling. """
-        return self.interpolate(x, scale_factor=factor, size=size)
+        return self.interpolate(x, output_size=output_size, size=size)
 
-    def downsample(self, x, factor, size):
+    def downsample(self, x, output_size, size):
         """ Feature map down-sampling. """
-        return self.interpolate(x, scale_factor=1.0/factor, size=size)
+        return self.interpolate(x, output_size=output_size, size=size)
 
-    def interpolate(self, x, scale_factor, size):
+    def interpolate(self, x, output_size, size):
         """ Feature map interpolation. """
         B, N, C = x.shape
         H, W = size
@@ -275,7 +276,7 @@ class ParallelBlock(nn.Module):
         img_tokens = x[:, 1:, :]
         
         img_tokens = img_tokens.transpose(1, 2).reshape(B, C, H, W)
-        img_tokens = F.interpolate(img_tokens, scale_factor=scale_factor, mode='bilinear')
+        img_tokens = F.interpolate(img_tokens, size=output_size, mode='bilinear')  # FIXME: May have alignment issue.
         img_tokens = img_tokens.reshape(B, C, -1).transpose(1, 2)
         
         out = torch.cat((cls_token, img_tokens), dim=1)
@@ -296,12 +297,12 @@ class ParallelBlock(nn.Module):
         cur2 = self.factoratt_crpe2(cur2, size=(H2,W2))
         cur3 = self.factoratt_crpe3(cur3, size=(H3,W3))
         cur4 = self.factoratt_crpe4(cur4, size=(H4,W4))
-        upsample3_2 = self.upsample(cur3, factor=2, size=(H3,W3))
-        upsample4_3 = self.upsample(cur4, factor=2, size=(H4,W4))
-        upsample4_2 = self.upsample(cur4, factor=4, size=(H4,W4))
-        downsample2_3 = self.downsample(cur2, factor=2, size=(H2,W2))
-        downsample3_4 = self.downsample(cur3, factor=2, size=(H3,W3))
-        downsample2_4 = self.downsample(cur2, factor=4, size=(H2,W2))
+        upsample3_2 = self.upsample(cur3, output_size=(H2,W2), size=(H3,W3))
+        upsample4_3 = self.upsample(cur4, output_size=(H3,W3), size=(H4,W4))
+        upsample4_2 = self.upsample(cur4, output_size=(H2,W2), size=(H4,W4))
+        downsample2_3 = self.downsample(cur2, output_size=(H3,W3), size=(H2,W2))
+        downsample3_4 = self.downsample(cur3, output_size=(H4,W4), size=(H3,W3))
+        downsample2_4 = self.downsample(cur2, output_size=(H4,W4), size=(H2,W2))
         cur2 = cur2  + upsample3_2   + upsample4_2
         cur3 = cur3  + upsample4_3   + downsample2_3
         cur4 = cur4  + downsample3_4 + downsample2_4

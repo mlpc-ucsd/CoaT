@@ -37,17 +37,18 @@ For more details, please refer to [CoaT: Co-Scale Conv-Attentional Image Transfo
 
    | Name | AP | AP50 | AP75 | APS | APM | APL |
    | --- | --- | --- | --- | --- | --- | --- |
-   | CoaT-Lite Small | 47.0 | 66.5 | 51.2 | 28.8 | 50.3 | 63.3 | 
-
+   | CoaT-Lite Small | 47.0 | 66.5 | 51.2 | 28.8 | 50.3 | 63.3 |
+   | CoaT Small | 48.4 | 68.5 | 52.4 | 30.1 | 51.8 | 63.8 |
 
 ## Changelog
+12/12/2021: Code and pre-trained checkpoints for Deformable-DETR with CoaT Small backbone are released. <br />
 12/07/2021: Training commands for CoaT-Lite Medium (384x384) are released. <br />
 12/06/2021: Pre-trained checkpoints for CoaT-Lite Medium (384x384) are released. <br />
 12/05/2021: Training scripts for CoaT Small and CoaT-Lite Medium are released. <br />
 09/27/2021: Code and pre-trained checkpoints for instance segmentation with MMDetection are released. <br />
 08/27/2021: Pre-trained checkpoints for CoaT Small and CoaT-Lite Medium are released. <br />
 05/19/2021: Pre-trained checkpoints for Mask R-CNN benchmark with CoaT-Lite Small backbone are released. <br />
-05/19/2021: Code and pre-trained checkpoints for Deformable-DETR with for CoaT-Lite Small backbone are released. <br />
+05/19/2021: Code and pre-trained checkpoints for Deformable-DETR with CoaT-Lite Small backbone are released. <br />
 05/11/2021: Pre-trained checkpoints for CoaT-Lite Small are released. <br />
 05/09/2021: Pre-trained checkpoints for Mask R-CNN benchmark with CoaT Mini backbone are released. <br />
 05/06/2021: Pre-trained checkpoints for CoaT Mini are released. <br />

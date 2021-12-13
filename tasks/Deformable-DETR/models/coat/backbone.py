@@ -6,7 +6,7 @@ from typing import Dict, List
 from util.misc import NestedTensor
 
 from ..position_encoding import build_position_encoding
-from .models.coat import coat_tiny, coat_mini, coat_lite_tiny, coat_lite_mini, coat_lite_small 
+from .models.coat import coat_tiny, coat_mini, coat_small, coat_lite_tiny, coat_lite_mini, coat_lite_small 
 
 
 __all__ = [
@@ -41,6 +41,9 @@ class CoaT_Backbone(nn.Module):
         elif name == 'coat_mini':
             model_func = coat_mini
             self._out_feature_channels = {"x1_nocls": 152, "x2_nocls": 216, "x3_nocls": 216, "x4_nocls": 216}
+        elif name == 'coat_small':
+            model_func = coat_small
+            self._out_feature_channels = {"x1_nocls": 152, "x2_nocls": 320, "x3_nocls": 320, "x4_nocls": 320}
         elif name == 'coat_lite_tiny':
             model_func = coat_lite_tiny
             self._out_feature_channels = {"x1_nocls": 64,  "x2_nocls": 128, "x3_nocls": 256, "x4_nocls": 320}

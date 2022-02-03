@@ -44,8 +44,8 @@ We provide the CoaT checkpoints pre-trained on the COCO dataset.
 
 | Name | AP | AP50 | AP75 | APS | APM | APL | SHA-256 (first 8 chars) | URL |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CoaT-Lite Small | 47.0 | 66.5 | 51.2 | 28.8 | 50.3 | 63.3 | 1801ee09 | [model](http://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_lite_small_deformable_detr_1801ee09.pth), [log](http://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_lite_small_deformable_detr_1801ee09.txt) |
-| CoaT Small | 48.4 | 68.5 | 52.4 | 30.1 | 51.8 | 63.8 | 8a86ba55 | [model](http://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_small_deformable_detr_8a86ba55.pth), [log](http://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_small_deformable_detr_8a86ba55.txt) |
+| CoaT-Lite Small | 47.0 | 66.5 | 51.2 | 28.8 | 50.3 | 63.3 | 1801ee09 | [model](https://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_lite_small_deformable_detr_1801ee09.pth), [log](https://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_lite_small_deformable_detr_1801ee09.txt) |
+| CoaT Small | 48.4 | 68.5 | 52.4 | 30.1 | 51.8 | 63.8 | 8a86ba55 | [model](https://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_small_deformable_detr_8a86ba55.pth), [log](https://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_small_deformable_detr_8a86ba55.txt) |
 
 
 The following commands provide an example (CoaT-Lite Small) to evaluate the pre-trained checkpoint.
@@ -54,7 +54,7 @@ The following commands provide an example (CoaT-Lite Small) to evaluate the pre-
    # Note: You need to have CoaT-Lite Small checkpoint for classification (coat_lite_small_8d362f48.pth) to run the following evaluation.
    #       Please refer to the [corresponding readme](../../README.md) to download the CoaT-Lite Small checkpoint for classification first.
    mkdir -p ./exps/pretrained
-   wget http://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_lite_small_deformable_detr_1801ee09.pth -P ./exps/pretrained
+   wget https://vcl.ucsd.edu/coat/pretrained/tasks/Deformable-DETR/coat_lite_small_deformable_detr_1801ee09.pth -P ./exps/pretrained
    sha256sum ./exps/pretrained/coat_lite_small_deformable_detr_1801ee09.pth  # Make sure it matches the SHA-256 hash (first 8 characters) in the table.
 
    # Evaluate.
